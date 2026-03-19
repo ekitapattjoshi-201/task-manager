@@ -1,73 +1,96 @@
-# React + TypeScript + Vite
+# 📝 Task Manager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Task Manager application built using **React, TypeScript, and Redux Toolkit**.
+This project demonstrates clean state management, CRUD operations, and persistent storage using localStorage.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+* ➕ Add new tasks
+* ❌ Delete tasks
+* ✅ Mark tasks as completed / pending
+* ✏️ Edit existing tasks (inline editing)
+* 🔍 Filter tasks:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+  * All
+  * Completed
+  * Pending
+* 💾 Persistent storage using **localStorage**
+* 🎨 Clean and responsive UI with SCSS Modules
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* **React**
+* **TypeScript**
+* **Redux Toolkit**
+* **SCSS Modules**
+* **Vite**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📁 Folder Structure
+
+```
+src/
+├── app/                # Redux store
+├── features/           # Redux slices & selectors
+│   └── tasks/
+├── components/         # UI components
+│   ├── TaskForm/
+│   ├── TaskList/
+│   ├── TaskItem/
+│   ├── TaskFilter/
+├── services/           # (reserved for API integration)
+├── utils/              # helper functions (localStorage)
+├── styles/             # global styles
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Installation & Setup
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Clone the repository
+git clone <your-repo-link>
+
+# Navigate into the project
+cd task-manager
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
+
+---
+
+## 💡 Key Learnings
+
+* Implemented full **CRUD operations** using Redux Toolkit
+* Managed global state using slices and selectors
+* Used **derived state** for filtering tasks
+* Persisted application state using **localStorage**
+* Built reusable and modular components
+* Applied SCSS Modules for scoped styling
+
+---
+
+## 🔮 Future Enhancements
+
+* 🌐 API integration using Redux Thunk
+* 🔐 Authentication system
+* 🎯 Drag and drop task management
+* 📱 Mobile responsiveness improvements
+
+---
+
+
+## 🙌 Acknowledgements
+
+This project was built to practice modern frontend development using React, TypeScript, and Redux.
+
+---

@@ -1,0 +1,70 @@
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.6rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.6rem;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+
+    &:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+.deleteBtn {
+    padding: 0.35rem 0.6rem;
+    background-color: #ef4444;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: #dc2626;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.input {
+    flex: 1;
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 3px;
+}
+
+.editBtn {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.saveBtn {
+    background-color: #22c55e;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
